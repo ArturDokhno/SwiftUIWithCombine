@@ -15,8 +15,6 @@ class SlotViewModel: ObservableObject {
     private let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
     init() {
-        randomize()
-        
         timer
             .receive(on: RunLoop.main)
             .sink { _ in self.randomize() }
@@ -24,7 +22,16 @@ class SlotViewModel: ObservableObject {
         
         $running
             .receive(on: RunLoop.main)
-            .map { $0 == true ? "Stop" : "Play" }
+            .map {
+                guard !$0 && self.gameStarted else { return "Spin the drum" }
+                return self.slot1Emoji == self.slot2Emoji && self.slot2Emoji == self.slot3Emoji ? "You victory!" : "You lose!"
+            }
+            .assign(to: \.titleText, on: self)
+            .store(in: &cancellables)
+        
+        $running
+            .receive(on: RunLoop.main)
+            .map { $0 == true ? "Stop!" : "Play!" }
             .assign(to: \.buttonText, on: self)
             .store(in: &cancellables)
     }
@@ -42,8 +49,8 @@ class SlotViewModel: ObservableObject {
     @Published var slot1Emoji = "🍒"
     @Published var slot2Emoji = "🍓"
     @Published var slot3Emoji = "🍋"
-    
-    @Published var titleText = "Spin the drum"
+
+    @Published var titleText = ""
     @Published var buttonText = ""
 }
 
@@ -77,10 +84,9 @@ struct ContentView: View {
                 SlotView { Text(slotViewModel.slot3Emoji) }
             }
             Spacer()
-            Button(action: { slotViewModel.running.toggle() }, label: { Text(slotViewModel.buttonText) })
+            Button(action: { slotViewModel.running.toggle(); slotViewModel.gameStarted = true }, label: { Text(slotViewModel.buttonText) })
             Spacer()
         }
-        .onAppear { slotViewModel.gameStarted = true }
     }
 }
 
