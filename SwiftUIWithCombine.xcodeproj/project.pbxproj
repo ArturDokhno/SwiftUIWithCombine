@@ -11,9 +11,6 @@
 		756A68452876BDFE0035160C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A68442876BDFE0035160C /* ContentView.swift */; };
 		756A68472876BE010035160C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756A68462876BE010035160C /* Assets.xcassets */; };
 		756A684A2876BE010035160C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756A68492876BE010035160C /* Preview Assets.xcassets */; };
-		756A68542876BE010035160C /* SwiftUIWithCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A68532876BE010035160C /* SwiftUIWithCombineTests.swift */; };
-		756A685E2876BE010035160C /* SwiftUIWithCombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A685D2876BE010035160C /* SwiftUIWithCombineUITests.swift */; };
-		756A68602876BE010035160C /* SwiftUIWithCombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756A685F2876BE010035160C /* SwiftUIWithCombineUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +37,7 @@
 		756A68462876BE010035160C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		756A68492876BE010035160C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		756A684F2876BE010035160C /* SwiftUIWithCombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIWithCombineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		756A68532876BE010035160C /* SwiftUIWithCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithCombineTests.swift; sourceTree = "<group>"; };
 		756A68592876BE010035160C /* SwiftUIWithCombineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIWithCombineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		756A685D2876BE010035160C /* SwiftUIWithCombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithCombineUITests.swift; sourceTree = "<group>"; };
-		756A685F2876BE010035160C /* SwiftUIWithCombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithCombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				756A68412876BDFE0035160C /* SwiftUIWithCombine */,
-				756A68522876BE010035160C /* SwiftUIWithCombineTests */,
-				756A685C2876BE010035160C /* SwiftUIWithCombineUITests */,
 				756A68402876BDFE0035160C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,23 +100,6 @@
 				756A68492876BE010035160C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		756A68522876BE010035160C /* SwiftUIWithCombineTests */ = {
-			isa = PBXGroup;
-			children = (
-				756A68532876BE010035160C /* SwiftUIWithCombineTests.swift */,
-			);
-			path = SwiftUIWithCombineTests;
-			sourceTree = "<group>";
-		};
-		756A685C2876BE010035160C /* SwiftUIWithCombineUITests */ = {
-			isa = PBXGroup;
-			children = (
-				756A685D2876BE010035160C /* SwiftUIWithCombineUITests.swift */,
-				756A685F2876BE010035160C /* SwiftUIWithCombineUITestsLaunchTests.swift */,
-			);
-			path = SwiftUIWithCombineUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756A68542876BE010035160C /* SwiftUIWithCombineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756A68602876BE010035160C /* SwiftUIWithCombineUITestsLaunchTests.swift in Sources */,
-				756A685E2876BE010035160C /* SwiftUIWithCombineUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
