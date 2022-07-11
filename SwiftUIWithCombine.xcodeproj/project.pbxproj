@@ -56,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				756A68412876BDFE0035160C /* SwiftUIWithCombine */,
-				75E5726F287C0D6E00BE7239 /* SwiftUIWithCombineTest */,
 				756A68402876BDFE0035160C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +76,7 @@
 				756A68442876BDFE0035160C /* ContentView.swift */,
 				756A68462876BE010035160C /* Assets.xcassets */,
 				756A68482876BE010035160C /* Preview Content */,
+				75E5726F287C0D6E00BE7239 /* SwiftUIWithCombineTest */,
 			);
 			path = SwiftUIWithCombine;
 			sourceTree = "<group>";
